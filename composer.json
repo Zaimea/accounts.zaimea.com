@@ -1,7 +1,7 @@
 {
-    "name": "zaimea/accounts.1s100.online",
+    "name": "zaimea/accounts.zaimea.com",
     "license": "MIT",
-    "homepage": "https://accounts.1s100.online",
+    "homepage": "https://accounts.zaimea.com",
     "description": "Authentication accounts for Zaimea",
     "keywords": [
         "authentication",
@@ -9,7 +9,7 @@
         "zaimea",
         "zaimea.com",
         "groups.zaimea.com",
-        "accounts.1s100.online"
+        "accounts.zaimea.com"
     ],
     "authors": [
         {
@@ -28,7 +28,7 @@
         "zaimea/accounts": "*",
         "zaimea/i18n": "dev-main",
         "zaimea/socialite-extender": "dev-main",
-        "zaimealabs/heroicons": "^1.0.1"
+        "zaimea/heroicons": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

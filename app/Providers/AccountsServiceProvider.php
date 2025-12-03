@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
+use Laravel\Passport\Passport;
 use Zaimea\Accounts\Fabric\Actions\Auth\CreateNewUser;
 use Zaimea\Accounts\Fabric\Actions\Auth\DeleteUser;
 use Zaimea\Accounts\Fabric\Actions\Auth\RedirectIfTwoFactorAuthenticatable;
@@ -37,6 +38,22 @@ class AccountsServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Passport::tokensCan([
+            'user' => 'Grants full access to user',
+            'user:read' => 'Retrieve the user info',
+            'user:update' => 'Update the user',
+            'group' => 'Grants full access to user group',
+            'group:read' => 'Retrive the user group info',
+        ]);
+
+        Passport::defaultScopes(['user:read']);
+
+        Passport::personalAccessTokensExpireIn(now()->addDays(30));
+        Passport::tokensExpireIn(now()->addYear(1));
+        Passport::refreshTokensExpireIn(now()->addDays(30));
+
+        Passport::enablePasswordGrant();
+
         $this->registerFabricSingleton();
         $this->registerUserSingleton();
 
