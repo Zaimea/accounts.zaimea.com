@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout layout="app"> 
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             <div class="flex flex-col min-w-0 break-words bg-white dark:bg-gray-800 w-full mb-6 shadow-xl rounded-lg mt-16">
@@ -39,6 +39,10 @@
                     <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
                         <x-icon name="map-pin" />
                         {{ $user->country }}, {{ $user->town }}
+                    </div>
+                    <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                        <x-icon name="language" />
+                        {{ $user->language }}
                     </div>
                   </div>
                   <div class="mt-10 py-10 border-t border-blueGray-200 text-center">

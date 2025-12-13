@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
+            $table->string('rollable_type')->nullable();
             $table->string('title')->nullable();
             $table->longText('description')->nullable();
             $table->tinyInteger('status')->default('1');

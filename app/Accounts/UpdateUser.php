@@ -13,6 +13,7 @@ class UpdateUser
             'birthday'        => ['nullable', 'date', 'before_or_equal:'.now()->subYears(16)],
             'gender'          => ['nullable', 'in:none,male,female,divers'],
             'country'         => ['nullable', 'string', 'max:45'],
+            'language'        => ['nullable', 'string', 'max:45'],
             'town'            => ['nullable', 'string', 'max:45'],
             'website'         => ['nullable', 'url', 'string', 'max:45'],
             'about'           => ['nullable', 'string', 'max:256'],

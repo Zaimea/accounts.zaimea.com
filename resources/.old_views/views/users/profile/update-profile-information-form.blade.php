@@ -61,7 +61,7 @@
 
          {{-- Username--}}
          <div class="col-span-6 sm:col-span-4">
-            <x-label for="username" value="{{ __('@i18n-groups::profile.username') }}" />
+            <x-label for="username" value="{{ __('@i18n-groups::user.username') }}" />
             <x-input id="username" type="text" class="mt-1 block w-full" wire:model="state.username" autocomplete="username" />
             <x-input-error for="username" class="mt-2" />
         </div>
@@ -111,11 +111,18 @@
             <x-input-error for="gender" class="mt-2" />
         </div>
 
-          {{-- Country --}}
+         {{-- Country --}}
          <div class="col-span-6 sm:col-span-4">
             <x-label for="country" value="{{ __('@i18n-groups::profile.country') }}" />
             <x-input id="country" type="text" class="mt-1 block w-full" wire:model="state.country" autocomplete="country" />
             <x-input-error for="country" class="mt-2" />
+        </div>
+
+         {{-- Language --}}
+         <div class="col-span-6 sm:col-span-4">
+            <x-label for="language" value="{{ __('@i18n-groups::profile.language') }}" />
+            <x-input id="language" type="text" class="mt-1 block w-full" wire:model="state.language" autocomplete="language" />
+            <x-input-error for="language" class="mt-2" />
         </div>
 
          {{-- Town --}}

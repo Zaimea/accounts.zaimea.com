@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $users = [
-            'Laur Example' => 'laurentiu@example.com',
-            'Custura Laurentiu' => 'mail@custura.de',
+            'Zaimea App' => 'mail@zaimea.com',
+            'Custura Laurentiu' => 'laurentiu@custura.de',
             'Custura Madalina' => 'madalina@custura.de',
         ];
 

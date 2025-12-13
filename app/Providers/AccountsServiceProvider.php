@@ -46,10 +46,10 @@ class AccountsServiceProvider extends ServiceProvider
             'group:read' => 'Retrive the user group info',
         ]);
 
-        Passport::defaultScopes(['user:read']);
+        Passport::defaultScopes(['user']);
 
         Passport::personalAccessTokensExpireIn(now()->addDays(30));
-        Passport::tokensExpireIn(now()->addYear(1));
+        Passport::tokensExpireIn(now()->addYear());
         Passport::refreshTokensExpireIn(now()->addDays(30));
 
         Passport::enablePasswordGrant();
